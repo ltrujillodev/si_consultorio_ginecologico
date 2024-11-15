@@ -1,5 +1,7 @@
 <?php
 
+require_once 'Persona.php';
+
 class Paciente extends Persona
 {
   private string $acomPer;

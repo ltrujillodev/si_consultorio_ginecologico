@@ -1,19 +1,32 @@
 <?php
+
 class Rol
 {
-  // Atributos
+  private int $idRol;
   private string $nomRol;
 
-  // Constructor sin parámetros
-  public function __construct() {}
+  public function __construct(int $idRol, string $nomRol)
+  {
+    $this->idRol = $idRol;
+    $this->nomRol = $nomRol;
+  }
 
-  // Métodos getter y setter
+  public function getIdRol(): int
+  {
+    return $this->idRol;
+  }
+
+  public function setIdRol(int $idRol)
+  {
+    $this->idRol = $idRol;
+  }
+
   public function getNomRol(): string
   {
     return $this->nomRol;
   }
 
-  public function setNomRol(string $nomRol): void
+  public function setNomRol(string $nomRol)
   {
     $this->nomRol = $nomRol;
   }
