@@ -1,0 +1,48 @@
+/* Paleta de colores */
+:root {
+  --oscuro: #131517;
+  --blanco: #f7f9f9;
+  --amarillo: #ffc300;
+  --celeste: #aed6f1;
+  --verdeFuerte: #27ae60;
+  --verdesuave: #daf7a6;
+  --rojo: #de3f33;
+  --coral: #ff7f50;
+  --dorado: #d7b269;
+  --azul: #0b1b34;
+}
+
+/* Estilos generales */
+body {
+  background-color: var(--azul);
+  color: var(--blanco);
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background-color: var(--oscuro);
+  color: var(--blanco);
+  border: 1px solid var(--dorado);
+}
+
+.btn-primary {
+  background-color: var(--dorado);
+  border-color: var(--dorado);
+}
+
+.btn-primary:hover {
+  background-color: var(--amarillo);
+  border-color: var(--amarillo);
+  color: var(--oscuro);
+}
+
+.form-control {
+  background-color: var(--blanco);
+  color: var(--oscuro);
+  border: 1px solid var(--dorado);
+}
+
+.form-control:focus {
+  border-color: var(--amarillo);
+  box-shadow: 0 0 5px var(--amarillo);
+}
