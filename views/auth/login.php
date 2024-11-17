@@ -14,7 +14,7 @@
 <body>
   <div class="container vh-100 d-flex justify-content-center align-items-center">
     <div class="card shadow p-4" style="width: 25rem;">
-      <h3 class="text-center mb-4">Iniciar Sesión</h3>
+      <h3 class="login text-center mb-4">Iniciar Sesión</h3>
       <form id="loginForm" action="../../controllers/UsuarioController.php?action=login" method="POST">
         <!-- Campo Usuario -->
         <div class="mb-3">
