@@ -55,6 +55,37 @@ class UsuarioServicio
     return null;
   }
 
+  public function buscarUsuarioPorUser(string $user): ?Usuario
+  {
+    $query = "SELECT * FROM Usuarios WHERE user_usu = ?";
+    $stmt = $this->db->prepare($query);
+    $stmt->bind_param("s", $user);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($row = $result->fetch_assoc()) {
+      $usuario = new Usuario();
+      $usuario->setDniPer($row['dni_usu']);
+      $usuario->setApePer($row['ape_usu']);
+      $usuario->setNomPer($row['nom_usu']);
+      $usuario->setFecNacPer(new DateTime($row['fec_nac_per']));
+      $usuario->setSexPer($row['sex_per']);
+      $usuario->setEstCivPer($row['est_civ_per']);
+      $usuario->setOcuPer($row['ocu_per']);
+      $usuario->setDomPer($row['dom_per']);
+      $usuario->setTelPer($row['tel_per']);
+      $usuario->setEmailPer($row['email_per']);
+      $usuario->setUserUsu($row['user_usu']);
+      $usuario->setPassUsu($row['pass_usu']);
+      $usuario->setActUsu($row['act_usu']);
+      $usuario->setRolUsu(new Rol($row['id_rol'], $row['nom_rol'])); // Asignar rol
+
+      return $usuario;
+    }
+    return null; // Si no se encuentra el usuario
+  }
+
+
   // Método para modificar un usuario
   public function modificarUsuario(Usuario $usuario)
   {

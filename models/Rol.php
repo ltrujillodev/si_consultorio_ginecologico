@@ -5,7 +5,7 @@ class Rol
   private int $idRol;
   private string $nomRol;
 
-  public function __construct(int $idRol, string $nomRol)
+  public function __construct(int $idRol, string $nomRol = '')
   {
     $this->idRol = $idRol;
     $this->nomRol = $nomRol;
