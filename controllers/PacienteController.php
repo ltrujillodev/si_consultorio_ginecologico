@@ -1,7 +1,7 @@
 <?php
 
-require_once '../models/PacienteServicio.php';
-require_once '../models/Paciente.php';
+require_once dirname(__DIR__) . '/models/PacienteServicio.php';
+require_once dirname(__DIR__) . '/models/Paciente.php';
 
 class PacienteController
 {

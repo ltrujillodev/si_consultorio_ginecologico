@@ -1,7 +1,7 @@
 <?php
 
 require_once 'HistoriaClinicaDetalle.php'; // Asegúrate de tener esta línea para incluir la clase
-require_once 'config/database.php'; // Para la conexión a la base de datos
+require_once '../config/database.php'; // Para la conexión a la base de datos
 
 class HistoriaClinicaDetalleServicio
 {

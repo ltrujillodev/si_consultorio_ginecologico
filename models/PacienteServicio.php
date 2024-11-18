@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Paciente.php'; // Asegúrate de que Paciente esté incluido
-require_once 'config/database.php'; // Para la conexión a la base de datos
+require_once dirname(__DIR__) . '/config/database.php'; // Para la conexión a la base de datos
 
 class PacienteServicio
 {

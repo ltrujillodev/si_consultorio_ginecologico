@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Usuario.php';
-require_once 'config/database.php'; // Para incluir la conexión a la base de datos
+require_once '../config/database.php'; // Para incluir la conexión a la base de datos
 
 class UsuarioServicio
 {
